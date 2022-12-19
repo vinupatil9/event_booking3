@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-19 11:18:36.359614",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "description",
+  "column_break_3",
+  "start_date",
+  "end_date",
+  "event_time",
+  "section_break_7",
+  "price",
+  "booking_capacity",
+  "column_break_10",
+  "venue",
+  "conducted_by",
+  "section_break_13",
+  "event_image",
+  "contact_number",
+  "column_break_16",
+  "ticket_types"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "event_time",
+   "fieldtype": "Time",
+   "label": "Event Time"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "booking_capacity",
+   "fieldtype": "Int",
+   "label": "Booking Capacity"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Venue"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Data",
+   "label": "Conducted By"
+  },
+  {
+   "fieldname": "event_image",
+   "fieldtype": "Attach Image",
+   "label": "Event Image"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket_types",
+   "fieldtype": "Table",
+   "label": "Ticket Types",
+   "options": "Ticket Types"
+  }
+ ],
+ "links": [],
+ "modified": "2022-12-19 11:39:42.217088",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "Manage Events",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

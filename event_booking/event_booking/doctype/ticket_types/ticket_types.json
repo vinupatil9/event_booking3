@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-19 11:37:36.067504",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_type_name",
+  "capacity",
+  "price"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_type_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ticket Type Name",
+   "options": "General\nVIP\nReserved seating\nOne-day pass\nMulti-day pass"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-19 11:37:36.067504",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "Ticket Types",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
