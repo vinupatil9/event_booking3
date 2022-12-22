@@ -1,8 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "EVNT.#######",
- "creation": "2022-12-19 11:18:36.359614",
+ "autoname": "TEVNT.#######",
+ "creation": "2022-12-20 13:02:25.060602",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -23,11 +23,8 @@
   "section_break_13",
   "event_image",
   "contact_number",
-  "column_break_20",
-  "is_published",
   "column_break_16",
-  "ticket_types",
-  "event_poster"
+  "ticket_types"
  ],
  "fields": [
   {
@@ -42,6 +39,10 @@
    "fieldname": "description",
    "fieldtype": "Long Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "start_date",
@@ -60,14 +61,22 @@
    "label": "Event Time"
   },
   {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
    "fieldname": "price",
-   "fieldtype": "Int",
+   "fieldtype": "Currency",
    "label": "Price"
   },
   {
    "fieldname": "booking_capacity",
    "fieldtype": "Int",
    "label": "Booking Capacity"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "venue",
@@ -81,6 +90,10 @@
    "label": "Conducted By"
   },
   {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
    "fieldname": "event_image",
    "fieldtype": "Attach Image",
    "label": "Event Image"
@@ -91,22 +104,6 @@
    "label": "Contact Number"
   },
   {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_7",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_10",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_13",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "column_break_16",
    "fieldtype": "Section Break"
   },
@@ -115,29 +112,13 @@
    "fieldtype": "Table",
    "label": "Ticket Types",
    "options": "Ticket Types"
-  },
-  {
-   "fieldname": "event_poster",
-   "fieldtype": "Image",
-   "label": "Event Poster",
-   "options": "event_image"
-  },
-  {
-   "default": "1",
-   "fieldname": "is_published",
-   "fieldtype": "Check",
-   "label": "Is Published"
-  },
-  {
-   "fieldname": "column_break_20",
-   "fieldtype": "Column Break"
   }
  ],
  "links": [],
- "modified": "2022-12-21 12:56:50.367317",
+ "modified": "2022-12-20 19:03:00.910099",
  "modified_by": "Administrator",
  "module": "Event Booking",
- "name": "Manage Events",
+ "name": "test manage event",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -155,14 +136,17 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Member",
+   "role": "All",
    "select": 1,
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,

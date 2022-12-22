@@ -1,0 +1,53 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Upcoming Events\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pune -Upcoming Events \",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kolhapur -Upcoming Event\",\"col\":4}}]",
+ "creation": "2022-12-20 22:33:11.612608",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-monthly-rank",
+ "idx": 0,
+ "label": "Upcoming Events",
+ "links": [],
+ "modified": "2022-12-21 19:42:32.442628",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "Upcoming Events",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 4.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "Total {}",
+   "label": "Upcoming Events",
+   "link_to": "Manage Events",
+   "stats_filter": "{\"is_published\":[\"=\",1]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "Events ({})",
+   "label": "Pune -Upcoming Events ",
+   "link_to": "Manage Events",
+   "stats_filter": "{\"venue\":[\"like\",\"%Pune%\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "Total ({})",
+   "label": "Kolhapur -Upcoming Event",
+   "link_to": "Manage Events",
+   "stats_filter": "{\"venue\":[\"like\",\"%Kolhapur%\"]}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Upcoming Events"
+}

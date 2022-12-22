@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TKT.########",
+ "creation": "2022-12-20 09:39:04.536729",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "select_event",
+  "event_name",
+  "venue",
+  "column_break_3",
+  "start_date",
+  "time_start",
+  "end_date",
+  "column_break_5",
+  "poster",
+  "section_break_9",
+  "section_break_8",
+  "ticket_status",
+  "ticket_type",
+  "team_name",
+  "meal_preference",
+  "column_break_12",
+  "pin_level",
+  "system_incharge",
+  "amount",
+  "section_break_16",
+  "poster_attach",
+  "user"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_event",
+   "fieldtype": "Data",
+   "label": "Event ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Data",
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_start",
+   "fieldtype": "Data",
+   "label": "Time Start",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Select",
+   "label": "Ticket Type",
+   "options": "VIP\nGENERAL"
+  },
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Link",
+   "label": "Team Name",
+   "options": "Team"
+  },
+  {
+   "fieldname": "meal_preference",
+   "fieldtype": "Link",
+   "label": "Meal Preference",
+   "options": "Meal Preference"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pin_level",
+   "fieldtype": "Link",
+   "label": "PIN LEVEL",
+   "options": "PIN Level"
+  },
+  {
+   "fieldname": "system_incharge",
+   "fieldtype": "Data",
+   "label": "System Incharge"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "poster",
+   "fieldtype": "Image",
+   "label": "Poster",
+   "options": "poster_attach"
+  },
+  {
+   "fieldname": "poster_attach",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "poster Attach"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ticket Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-21 16:20:22.095474",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "Tickets",
+ "name_case": "Title Case",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Infinite admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

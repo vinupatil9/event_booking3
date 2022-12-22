@@ -1,0 +1,37 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Ticket Booking</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket Report\",\"col\":3}}]",
+ "creation": "2022-12-20 18:47:32.963866",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-monthly-rank",
+ "idx": 0,
+ "label": "Tickets Booking",
+ "links": [],
+ "modified": "2022-12-21 19:40:42.280980",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "Tickets Booking",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Infinite admin"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ticket Report",
+   "link_to": "Ticket Reports",
+   "type": "Report"
+  }
+ ],
+ "title": "Tickets Booking"
+}
