@@ -1,1 +1,9 @@
-<h1>testing file</h1>
+{% extends "templates/web.html" %} {% block page_content %}
+<div class="row">
+  <section>
+    <input type="radio" name="gender" value="USD" checked /> USD <br />
+    <input type="radio" name="gender" value="INR" style="margin-top: 15px" />
+    INR <br />
+  </section>
+</div>
+{% endblock %}
