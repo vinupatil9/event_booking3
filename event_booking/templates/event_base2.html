@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock %} - 
-      Upcoming Event</title>
+      Event Booking App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="/assets/event_booking/homeland/fonts/icomoon/style.css">
 
-    <lin krel="stylesheet" href="/assets/event_booking/homeland/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/event_booking/homeland/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/event_booking/homeland/css/magnific-popup.css">
     <link rel="stylesheet" href="/assets/event_booking/homeland/css/jquery-ui.css">
     <link rel="stylesheet" href="/assets/event_booking/homeland/css/owl.carousel.min.css">
@@ -45,91 +45,13 @@
     window.socketio_port = {{ (frappe.socketio_port or 'null') }};
   </script>
   <!-- FRAPPE RESOURCES HEAD -->
-//   </head>
+  </head>
   <body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%} class="{{ body_class or ''}}">
 
   <div class="site-loader"></div>  
-  <div class="container-fluid">
-  <div class="row flex-nowrap">
-      
-          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-              <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                  <span class="fs-5 d-none d-sm-inline">Menu</span>
-              </a>
-              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                  <li class="nav-item">
-                      <a href="#" class="nav-link align-middle px-0">
-                          <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                          <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                      <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                          <li class="w-100">
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
-                          </li>
-                          <li>
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#" class="nav-link px-0 align-middle">
-                          <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                  </li>
-                  <li>
-                      <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                          <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                      <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                          <li class="w-100">
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-                          </li>
-                          <li>
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                          <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-                          <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                          <li class="w-100">
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                          </li>
-                          <li>
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                          </li>
-                          <li>
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                          </li>
-                          <li>
-                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#" class="nav-link px-0 align-middle">
-                          <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-                  </li>
-              </ul>
-              <hr>
-              <div class="dropdown pb-4">
-                  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">LogOut</span>
-                  </a>
-                  
-              </div>
-          </div>
-      </div>
-      <div class="col py-3">
-        {% block content %}
-        {% endblock %}
-      </div>
-  </div>
-</div>
- 
+
+  {% block content %}
+  {% endblock %}
   
 
 </div>
@@ -160,6 +82,5 @@
 <script type="text/javascript" src="/assets/js/erpnext.min.js?ver=1617776598.0"></script>
 
 <script>frappe.csrf_token = "{{frappe.session.csrf_token}}";</script>
-
 </body>
 </html>

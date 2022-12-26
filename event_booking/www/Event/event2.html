@@ -1,85 +1,163 @@
-{% extends 'templates/event_base2.html' %}
+{% extends 'templates/event_base.html' %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 
-<div class="site-section site-section-sm bg-light">
-  <div class="container">
 
-    <div class="row mb-5">
-
-      {% for property in properties %}
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="property-entry h-100">
-          <a href="/property/detail/{{property.name}}" class="property-thumbnail">
-            <div class="offer-type-wrap">
-              <!-- <span class="offer-type bg-{% if property.status=='Rent' %}success{% elif property.status=='Sale' %}danger{% else %}warning{% endif %}"> -->
-                <span class="offer-type bg-success">
-                {{property.Title}}</span>
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white">
+          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+              <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <span class="fs-5 d-none d-sm-inline">Menu</span>
+              </a>
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                  <li class="nav-item">
+                      <a href="#" class="nav-link align-middle px-0">
+                          <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                      <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                          <li class="w-100">
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                  </li>
+                  <li>
+                      <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                          <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
+                      <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                          <li class="w-100">
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                          <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                          <li class="w-100">
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                  </li>
+              </ul>
+              <hr>
+              <div class="dropdown pb-4">
+                  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">LogOut</span>
+                  </a>
+                  
+              </div>
+          </div>
+      </div>
+      <div class="col py-3">
+        <div class="site-section site-section-sm bg-light">
+          <div class="container">
+    
+            <div class="row mb-5">
+    
+              {% for property in properties %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="property-entry h-100">
+                  <a href="/property/detail/{{property.name}}" class="property-thumbnail">
+                    <div class="offer-type-wrap">
+                      <!-- <span class="offer-type bg-{% if property.status=='Rent' %}success{% elif property.status=='Sale' %}danger{% else %}warning{% endif %}"> -->
+                        <span class="offer-type bg-success">
+                        {{property.Title}}</span>
+                    </div>
+                    <img src="{{property.event_image}}" alt="Image" class="img-fluid">
+                  </a>
+                  <div class="p-4 property-body">
+                    <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+                    <h2 class="property-title"><a href="/property/detail/{{property.name}}">{{property.Title}}</a></h2>
+                    <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> {{property.venue}}</span>
+                    <strong class="property-price text-primary mb-3 d-block text-success">
+                      <!-- {{ frappe.format(property.price, {'fieldtype': 'Currency'}) }} <br> -->
+                      <!-- property_in_btc(property.grand_total) -->
+                    </strong>
+                    <!-- <ul class="property-specs-wrap mb-3 mb-lg-0">
+                      <li>
+                        <span class="property-specs">Beds</span>
+                        <span class="property-specs-number">2 <sup>+</sup></span>
+    
+                      </li>
+                      <li>
+                        <span class="property-specs">Baths</span>
+                        <span class="property-specs-number">2</span>
+    
+                      </li>
+                      <li>
+                        <span class="property-specs">SQ FT</span>
+                        <span class="property-specs-number">7,000</span>
+    
+                      </li>
+                    </ul> -->
+    
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+    
+    
+    
+    
             </div>
-            <img src="{{property.event_image}}" alt="Image" class="img-fluid">
-          </a>
-          <div class="p-4 property-body">
-            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
-            <h2 class="property-title"><a href="/property/detail/{{property.name}}">{{property.Title}}</a></h2>
-            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> {{property.venue}}</span>
-            <strong class="property-price text-primary mb-3 d-block text-success">
-              <!-- {{ frappe.format(property.price, {'fieldtype': 'Currency'}) }} <br> -->
-              <!-- property_in_btc(property.grand_total) -->
-            </strong>
-            <!-- <ul class="property-specs-wrap mb-3 mb-lg-0">
-              <li>
-                <span class="property-specs">Beds</span>
-                <span class="property-specs-number">2 <sup>+</sup></span>
-
-              </li>
-              <li>
-                <span class="property-specs">Baths</span>
-                <span class="property-specs-number">2</span>
-
-              </li>
-              <li>
-                <span class="property-specs">SQ FT</span>
-                <span class="property-specs-number">7,000</span>
-
-              </li>
-            </ul> -->
-
+            <!-- <div class="row">
+              <div class="col-md-12 text-center">
+                <div class="site-pagination">
+                  {% if frappe.form_dict.type %}
+                    {% if prev  %}
+                    <a href="/?page={{prev}}&type={{type}}&status={{status}}&city={{city}}" class="btn btn-warning">Previous</a>
+                    {% endif %}
+                    {% if next %}
+                    <a href="/?page={{next}}&type={{type}}&status={{status}}&city={{city}}" class="btn btn-primary">Next</a>
+                    {% endif %}
+                  {% else %}
+                    {% if prev  %}
+                    <a href="/?page={{prev}}" class="btn btn-warning">Previous</a>
+                    {% endif %}
+                    {% if next %}
+                    <a href="/?page={{next}}" class="btn btn-primary">Next</a>
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            </div> -->
+    
           </div>
         </div>
       </div>
-      {% endfor %}
-
-
-
-
-    </div>
-    <!-- <div class="row">
-      <div class="col-md-12 text-center">
-        <div class="site-pagination">
-          {% if frappe.form_dict.type %}
-            {% if prev  %}
-            <a href="/?page={{prev}}&type={{type}}&status={{status}}&city={{city}}" class="btn btn-warning">Previous</a>
-            {% endif %}
-            {% if next %}
-            <a href="/?page={{next}}&type={{type}}&status={{status}}&city={{city}}" class="btn btn-primary">Next</a>
-            {% endif %}
-          {% else %}
-            {% if prev  %}
-            <a href="/?page={{prev}}" class="btn btn-warning">Previous</a>
-            {% endif %}
-            {% if next %}
-            <a href="/?page={{next}}" class="btn btn-primary">Next</a>
-            {% endif %}
-          {% endif %}
-        </div>
-      </div>
-    </div> -->
-
   </div>
 </div>
-
     
 
 
