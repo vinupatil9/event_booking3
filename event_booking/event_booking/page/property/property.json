@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2022-12-23 12:48:08.955730",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-12-23 12:48:08.955730",
+ "modified_by": "Administrator",
+ "module": "Event Booking",
+ "name": "property",
+ "owner": "Administrator",
+ "page_name": "property",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Infinite admin"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "pro"
+}
