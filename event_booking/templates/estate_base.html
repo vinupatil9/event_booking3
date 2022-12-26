@@ -1,40 +1,40 @@
 {% block page_content %}
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}{% endblock %} - Estate App</title> -->
-    <!-- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <title>{% block title %}{% endblock %} - Estate App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link
-   
-    itemprop="url"
+    
+  		rel="shortcut icon"
   		href="/assets/erpnext/images/erpnext-favicon.svg"
   		type="image/x-icon"
   	>
-    <link  itemprop="url" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-    <link  itemprop="url" href="/assets/estate_app/homeland/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/fonts/icomoon/style.css">
 
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/bootstrap.min.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/magnific-popup.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/jquery-ui.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/owl.carousel.min.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/owl.theme.default.min.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/bootstrap-datepicker.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/mediaelementplayer.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/animate.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/fonts/flaticon/font/flaticon.css">
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/fl-bigmug-line.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/mediaelementplayer.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/animate.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/fl-bigmug-line.css">
 
 
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/aos.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/aos.css">
 
-    <link  itemprop="url" href="/assets/estate_app/homeland/css/style.css">
+    <link rel="stylesheet" href="/assets/estate_app/homeland/css/style.css">
 
   <!-- FRAPPE RESOURCES HEAD -->
-  <!-- <link rel="icon" href="/assets/erpnext/images/erpnext-favicon.svg" type="image/x-icon">-->
-  <link type="text/css"  itemprop="url" href="/assets/css/desk.min.css?ver=1617776598.0">
-  <link type="text/css"  itemprop="url" href="/assets/css/erpnext.css?ver=1617776598.0">
+  <link rel="icon" href="/assets/erpnext/images/erpnext-favicon.svg" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="/assets/css/desk.min.css?ver=1617776598.0">
+  <link type="text/css" rel="stylesheet" href="/assets/css/erpnext.css?ver=1617776598.0">
 
   <script>
     window.frappe = {};
@@ -46,8 +46,8 @@
     window.socketio_port = {{ (frappe.socketio_port or 'null') }};
   </script>
   <!-- FRAPPE RESOURCES HEAD -->
-  // </head>
-  <div frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%} class="{{ body_class or ''}}">
+  </head>
+  <body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%} class="{{ body_class or ''}}">
 
   <div class="site-loader"></div>
 
@@ -205,6 +205,6 @@
 <script type="text/javascript" src="/assets/js/erpnext.min.js?ver=1617776598.0"></script>
 
 <script>frappe.csrf_token = "{{frappe.session.csrf_token}}";</script>
-</div>
-// </html>
+</body>
+</html>
 {% endblock %}
