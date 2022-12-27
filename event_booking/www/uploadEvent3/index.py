@@ -15,7 +15,8 @@ def get_context(context):
     pagination = paginate(doctype='Manage Events', page=page, conditions=conditions) #pass to pagination
     # context.cities = frappe.db.sql("""SELECT name FROM `tabCity`;""", as_dict=True)
     # context.types = frappe.db.sql("""SELECT name FROM `tabProperty Type`;""", as_dict=True)
-    context.properties = pagination.get('properties')
+    # context.properties = pagination.get('properties')
+    context.properties = "xsnxj"
     context.search = pagination.get('search')
     context.prev = pagination.get('prev')
     context.next = pagination.get('next')
