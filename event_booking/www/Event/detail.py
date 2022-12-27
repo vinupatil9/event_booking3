@@ -1,6 +1,7 @@
 import frappe
 
 def get_context(context):
+    
     print(f"\n\n\n\n{frappe.form_dict}\n\n\n\n")
     try:
         docname = frappe.form_dict.docnam
