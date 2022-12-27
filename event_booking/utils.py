@@ -28,7 +28,7 @@ def paginate(doctype, page=0, conditions=" ", paginate_by=6):
     # query = f"""SELECT name, property_name, status, address, grand_total,
     #             image FROM `tab{doctype}` {conditions} ORDER BY creation DESC """
 
-    query = f"""SELECT name, Title, start_date,end_date, venue, price,
+    query = f"""SELECT name, Title, description,start_date,event_time,end_date, venue, price,
                 event_image FROM `tab{doctype}` {conditions} ORDER BY creation DESC """
 
 
