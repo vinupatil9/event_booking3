@@ -3,8 +3,6 @@ from event_booking.utils import paginate
 
 
 def get_context(context):
-    print(f"\n\n\n\n{frappe.form_dict}\n\n\n\n")
-    
     page = frappe.form_dict.page
     # check if search request
     conditions = " "
