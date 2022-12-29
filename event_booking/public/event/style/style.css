@@ -63,3 +63,11 @@ body{
 /* .font-bold{
     font-weight: 600;
 } */
+
+.bkground
+{
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
