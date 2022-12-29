@@ -4,11 +4,11 @@ from event_booking.utils import paginate
 
 def get_context(context):
     try:
-        frappe.msgprint(
-         msg='This file does not exist',
-         title='Error',
-         raise_exception=FileNotFoundError
-          )
+        # frappe.msgprint(
+        #  msg='This file does not exist',
+        #  title='Error',
+        #  raise_exception=FileNotFoundError
+        #   )
         page = frappe.form_dict.page
         # check if search request
         conditions = " "
