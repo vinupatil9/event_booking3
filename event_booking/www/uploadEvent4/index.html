@@ -90,12 +90,21 @@ content %}
           </div>
         </div>
 
-        <div class="row mt-3 card-footer">
+        <!-- <div class="row mt-3 card-footer">
           <div class="col-6">
             <h3>{{property.price}}</h3>
           </div>
           <div class="col-6 font-500">
             <button type="button" class="btn btn-warning">Book Now</button>
+          </div>
+        </div> -->
+
+        <div class="row mt-3 card-footer">
+          <div class="col-6">
+              <h3><i style="font-size: 24px; font-weight: 600;" class="fa-solid fa-indian-rupee-sign"></i> {{property.price}}</h3>
+          </div>
+          <div class="col-6 font-500 d-flex justify-content-center align-items-center px-0">
+              <button type="button" class="btn btn-warning book-now-btn">Book Now</button>
           </div>
         </div>
       </div>
