@@ -28,8 +28,14 @@ def paginate(doctype, page=0, conditions=" ", paginate_by=6):
     # query = f"""SELECT name, property_name, status, address, grand_total,
     #             image FROM `tab{doctype}` {conditions} ORDER BY creation DESC """
 
-    query = f"""SELECT name, Title, description,start_date,event_time,end_date, venue, price,
-                event_image FROM `tab{doctype}` {conditions} ORDER BY creation DESC """
+    # query = f"""SELECT name, Title, description,start_date,event_time,end_date, venue, price,
+    #             event_image FROM `tab{doctype}` {conditions} ORDER BY creation DESC """
+
+    query = f"""SELECT A.name, A.Title, A.description,A.start_date,A.event_time,A.end_date, A.venue, A.price,
+            A.booking_capacity,A.event_image, count(B.select_event) as Tickets_booked,
+            (A.booking_capacity-count(B.select_event)) as tickets_left 
+            FROM `tabManage Events` as A left join tabTickets as B on A.name=B.select_event 
+            group by B.select_event order by A.name """
 
 
     if(page):
