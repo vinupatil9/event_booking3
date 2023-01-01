@@ -1,7 +1,7 @@
 import frappe
 from event_booking.utils import paginate
-import _
-from frappe.utils
+from frappe import _
+
 
 
 def get_context(context):
