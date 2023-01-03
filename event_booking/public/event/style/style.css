@@ -27,14 +27,14 @@ body {
 }
 
 .card-color2 {
-  background: linear-gradient(180deg, #223b4d 0%, #2e654e 47.19%, #86a260 100%);
+  background: linear-gradient(180deg, #223b4d, #2e654e, #86a260);
 }
 .card-color3 {
-  background: linear-gradient(180deg, #cc7042 0%, #c83728 47.19%, #c23856 100%);
+  background: linear-gradient(180deg, #cc7042, #c83728, #c23856);
 }
 
 .card-footer {
-  background-color: #2e6265;
+  /* background-color: #2e6265; */
   border-bottom-left-radius: 25px !important;
   border-bottom-right-radius: 25px !important;
   margin-left: -16px;
