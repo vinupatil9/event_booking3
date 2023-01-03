@@ -26,7 +26,7 @@ def get_context(context):
         pagination = paginate(doctype='Manage Events', page=page, conditions=conditions) #pass to pagination
         # context.cities = frappe.db.sql("""SELECT name FROM `tabCity`;""", as_dict=True)
         # context.types = frappe.db.sql("""SELECT name FROM `tabProperty Type`;""", as_dict=True)
-        colors = ["card-color", "card-color2", "card-color3"]
+        colors = ["card-color ", "card-color2", "card-color3"]
         properties = pagination.get('properties')
         for i, event in enumerate(properties):
             event["color"] = colors[i % len(colors)]
